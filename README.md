@@ -1,10 +1,14 @@
-# TodoListTest
+# TODO List
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
+
+To run the application, clone this repository, go the project folder and run `npm install`. Then, start the development server following the instructions below.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+There is no backend in this project. All data will reset if the page is reloaded.
 
 ## Code scaffolding
 

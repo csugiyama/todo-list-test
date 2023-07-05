@@ -1,0 +1,30 @@
+.dashboard {
+  &__header {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+  }
+
+  &__list-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  &__card-container {
+    margin: 12px 0;
+    max-width: 200px;
+    min-width: 200px;
+  }
+
+  &__filters {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__chips-container, &__search-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}

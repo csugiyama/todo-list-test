@@ -1,0 +1,21 @@
+<mat-card class="todo-card">
+  <mat-card-header class="todo-card__header">
+    <mat-icon fontIcon="edit" class="todo-card__icon" (click)="onEdit()"></mat-icon>
+    <mat-icon fontIcon="delete" class="todo-card__icon" (click)="onDelete()"></mat-icon>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="todo-card__content">
+      <p class="todo-card__description">
+        {{ description }}
+      </p>
+      <mat-divider class="todo-card__divider"></mat-divider>
+      <span class="todo-card__date">
+        Due: {{ getFormattedDate(dueDate) }}
+      </span>
+      <span class="todo-card__priority">
+        Priority:
+        <span class="{{ getPriorityClass() }}">{{ getPriorityText() }}</span>
+      </span>
+    </div>
+  </mat-card-content>
+</mat-card>

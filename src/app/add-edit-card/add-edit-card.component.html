@@ -1,0 +1,37 @@
+<form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea
+      class="form-control"
+      name="description"
+      id="description"
+      formControlName="description"
+    ></textarea>
+  </div>
+  <div class="form-group">
+    <label for="dueDate">Due Date</label>
+    <input
+      type="date"
+      class="form-control"
+      name="dueDate"
+      id="dueDate"
+      formControlName="dueDate"
+    />
+  </div>
+  <div class="form-group">
+    <label for="priority-list">Priority</label>
+    <mat-chip-listbox id="priority-list" #chipList formControlName="priority">
+      <mat-chip-option [value]="1">High</mat-chip-option>
+      <mat-chip-option [value]="2">Medium</mat-chip-option>
+      <mat-chip-option [value]="3">Low</mat-chip-option>
+    </mat-chip-listbox>
+  </div>
+  <button
+    mat-flat-button
+    color="primary"
+    type="submit"
+    [disabled]="isSaveDisabled()"
+  >
+    Save
+  </button>
+</form>

@@ -1,0 +1,32 @@
+.todo-card {
+  &--high {
+    color: #cb4335;
+  }
+
+  &--medium {
+    color: #d4ac0d;
+  }
+
+  &--low {
+    color: #138d75;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__divider {
+    margin-bottom: 8px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  &__icon {
+    cursor: pointer;
+  }
+}

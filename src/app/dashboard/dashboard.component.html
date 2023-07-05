@@ -1,0 +1,30 @@
+<div class="dashboard__header">
+  <div class="dashboard__filters">
+    <div class="dashboard__search-container">
+      <label for="search-box">Search</label>
+      <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+    </div>
+    <div class="dashboard__chips-container">
+      <label for="priority-list">Priority</label>
+      <mat-chip-listbox id="priority-list" #chipList (change)="prioritySearch(chipList.value)">
+        <mat-chip-option [value]="1">High</mat-chip-option>
+        <mat-chip-option [value]="2">Medium</mat-chip-option>
+        <mat-chip-option [value]="3">Low</mat-chip-option>
+      </mat-chip-listbox>
+    </div>
+  </div>
+  <button mat-flat-button color="primary" (click)="goToAddItem()">
+    New item
+  </button>
+</div>
+<div class="dashboard__list-container">
+  <div *ngFor="let card of cards$ | async; let i = index" class="dashboard__card-container">
+    <app-todo-card
+      [description]="card.description"
+      [dueDate]="card.dueDate"
+      [priority]="card.priority"
+      (delete)="onDeleteCard(i)"
+      (edit)="onEditItem(i)"
+    ></app-todo-card>
+  </div>
+</div>
